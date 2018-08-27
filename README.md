@@ -1,5 +1,5 @@
 # Kraken_iOS_API
-Kraken iOS API Client example
+Kraken Exchange iOS API Client example
 
 The Kraken web site (https://www.kraken.com/help/api#example-api-code) has some API client examples, but unfortunately it lacks one for the iOS platform
 This project fills this gap by providing an easy to use working example
