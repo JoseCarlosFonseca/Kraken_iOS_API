@@ -7,21 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		996DD2902132CC8000C7A1F5 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD28B2132CC8000C7A1F5 /* HMAC.swift */; };
+		996DD2912132CC8000C7A1F5 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD28C2132CC8000C7A1F5 /* Digest.swift */; };
+		996DD2922132CC8000C7A1F5 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD28D2132CC8000C7A1F5 /* String+Crypto.swift */; };
+		996DD2932132CC8000C7A1F5 /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD28E2132CC8000C7A1F5 /* Data+Crypto.swift */; };
+		996DD2992133096D00C7A1F5 /* GetPublicTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD2982133096D00C7A1F5 /* GetPublicTicker.swift */; };
+		996DD29B21331EED00C7A1F5 /* GetPublicTrades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD29A21331EED00C7A1F5 /* GetPublicTrades.swift */; };
+		996DD29D2133232500C7A1F5 /* GetPublicOHLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD29C2133232500C7A1F5 /* GetPublicOHLC.swift */; };
+		996DD29F213328AC00C7A1F5 /* GetPrivateBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD29E213328AC00C7A1F5 /* GetPrivateBalance.swift */; };
+		996DD2A12133310400C7A1F5 /* GetPrivateTradeBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD2A02133310400C7A1F5 /* GetPrivateTradeBalance.swift */; };
+		996DD2A32133D7ED00C7A1F5 /* GetPrivateTradesHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD2A22133D7ED00C7A1F5 /* GetPrivateTradesHistory.swift */; };
+		996DD2A52133DD4800C7A1F5 /* GetPrivateOpenOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD2A42133DD4800C7A1F5 /* GetPrivateOpenOrders.swift */; };
+		996DD2A72133E0A400C7A1F5 /* SetPrivateAddOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996DD2A62133E0A400C7A1F5 /* SetPrivateAddOrder.swift */; };
 		99CFC10D2132B95B00311357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC10C2132B95B00311357 /* AppDelegate.swift */; };
-		99CFC10F2132B95B00311357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC10E2132B95B00311357 /* ViewController.swift */; };
 		99CFC1122132B95B00311357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99CFC1102132B95B00311357 /* Main.storyboard */; };
 		99CFC1142132B95C00311357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CFC1132132B95C00311357 /* Assets.xcassets */; };
 		99CFC1172132B95C00311357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99CFC1152132B95C00311357 /* LaunchScreen.storyboard */; };
+		99CFC11F2132BABD00311357 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC11E2132BABD00311357 /* TableViewController.swift */; };
+		99CFC1222132C14C00311357 /* CallKrakenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC1212132C14C00311357 /* CallKrakenAPI.swift */; };
+		99CFC1272132C70900311357 /* GetPublicTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CFC1262132C70900311357 /* GetPublicTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		996DD28B2132CC8000C7A1F5 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		996DD28C2132CC8000C7A1F5 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digest.swift; sourceTree = "<group>"; };
+		996DD28D2132CC8000C7A1F5 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		996DD28E2132CC8000C7A1F5 /* Data+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Crypto.swift"; sourceTree = "<group>"; };
+		996DD2952132D28D00C7A1F5 /* Kraken_iOS_API-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kraken_iOS_API-Bridging-Header.h"; sourceTree = "<group>"; };
+		996DD2982133096D00C7A1F5 /* GetPublicTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPublicTicker.swift; sourceTree = "<group>"; };
+		996DD29A21331EED00C7A1F5 /* GetPublicTrades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPublicTrades.swift; sourceTree = "<group>"; };
+		996DD29C2133232500C7A1F5 /* GetPublicOHLC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPublicOHLC.swift; sourceTree = "<group>"; };
+		996DD29E213328AC00C7A1F5 /* GetPrivateBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateBalance.swift; sourceTree = "<group>"; };
+		996DD2A02133310400C7A1F5 /* GetPrivateTradeBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateTradeBalance.swift; sourceTree = "<group>"; };
+		996DD2A22133D7ED00C7A1F5 /* GetPrivateTradesHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateTradesHistory.swift; sourceTree = "<group>"; };
+		996DD2A42133DD4800C7A1F5 /* GetPrivateOpenOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPrivateOpenOrders.swift; sourceTree = "<group>"; };
+		996DD2A62133E0A400C7A1F5 /* SetPrivateAddOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPrivateAddOrder.swift; sourceTree = "<group>"; };
 		99CFC1092132B95B00311357 /* Kraken_iOS_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kraken_iOS_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CFC10C2132B95B00311357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99CFC10E2132B95B00311357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99CFC1112132B95B00311357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99CFC1132132B95C00311357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99CFC1162132B95C00311357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99CFC1182132B95C00311357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99CFC11E2132BABD00311357 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		99CFC1212132C14C00311357 /* CallKrakenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKrakenAPI.swift; sourceTree = "<group>"; };
+		99CFC1262132C70900311357 /* GetPublicTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPublicTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +64,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		996DD28A2132CC8000C7A1F5 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				996DD28B2132CC8000C7A1F5 /* HMAC.swift */,
+				996DD28C2132CC8000C7A1F5 /* Digest.swift */,
+				996DD28D2132CC8000C7A1F5 /* String+Crypto.swift */,
+				996DD28E2132CC8000C7A1F5 /* Data+Crypto.swift */,
+				996DD2952132D28D00C7A1F5 /* Kraken_iOS_API-Bridging-Header.h */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
 		99CFC1002132B95B00311357 = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +96,56 @@
 			isa = PBXGroup;
 			children = (
 				99CFC10C2132B95B00311357 /* AppDelegate.swift */,
-				99CFC10E2132B95B00311357 /* ViewController.swift */,
+				99CFC11E2132BABD00311357 /* TableViewController.swift */,
 				99CFC1102132B95B00311357 /* Main.storyboard */,
 				99CFC1132132B95C00311357 /* Assets.xcassets */,
 				99CFC1152132B95C00311357 /* LaunchScreen.storyboard */,
+				99CFC1202132C0E500311357 /* KrakenAPI */,
+				996DD28A2132CC8000C7A1F5 /* Crypto */,
 				99CFC1182132B95C00311357 /* Info.plist */,
 			);
 			path = Kraken_iOS_API;
+			sourceTree = "<group>";
+		};
+		99CFC1202132C0E500311357 /* KrakenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				99CFC1212132C14C00311357 /* CallKrakenAPI.swift */,
+				99CFC1232132C2FD00311357 /* PublicMarketData */,
+				99CFC1242132C31000311357 /* PrivateUserData */,
+				99CFC1252132C31B00311357 /* PrivateUserTrading */,
+			);
+			path = KrakenAPI;
+			sourceTree = "<group>";
+		};
+		99CFC1232132C2FD00311357 /* PublicMarketData */ = {
+			isa = PBXGroup;
+			children = (
+				99CFC1262132C70900311357 /* GetPublicTime.swift */,
+				996DD2982133096D00C7A1F5 /* GetPublicTicker.swift */,
+				996DD29A21331EED00C7A1F5 /* GetPublicTrades.swift */,
+				996DD29C2133232500C7A1F5 /* GetPublicOHLC.swift */,
+			);
+			path = PublicMarketData;
+			sourceTree = "<group>";
+		};
+		99CFC1242132C31000311357 /* PrivateUserData */ = {
+			isa = PBXGroup;
+			children = (
+				996DD29E213328AC00C7A1F5 /* GetPrivateBalance.swift */,
+				996DD2A02133310400C7A1F5 /* GetPrivateTradeBalance.swift */,
+				996DD2A22133D7ED00C7A1F5 /* GetPrivateTradesHistory.swift */,
+				996DD2A42133DD4800C7A1F5 /* GetPrivateOpenOrders.swift */,
+			);
+			path = PrivateUserData;
+			sourceTree = "<group>";
+		};
+		99CFC1252132C31B00311357 /* PrivateUserTrading */ = {
+			isa = PBXGroup;
+			children = (
+				996DD2A62133E0A400C7A1F5 /* SetPrivateAddOrder.swift */,
+			);
+			path = PrivateUserTrading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +180,7 @@
 				TargetAttributes = {
 					99CFC1082132B95B00311357 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -135,8 +220,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99CFC10F2132B95B00311357 /* ViewController.swift in Sources */,
+				996DD2A32133D7ED00C7A1F5 /* GetPrivateTradesHistory.swift in Sources */,
+				99CFC1272132C70900311357 /* GetPublicTime.swift in Sources */,
+				996DD2902132CC8000C7A1F5 /* HMAC.swift in Sources */,
+				996DD2932132CC8000C7A1F5 /* Data+Crypto.swift in Sources */,
+				996DD2A12133310400C7A1F5 /* GetPrivateTradeBalance.swift in Sources */,
+				996DD29F213328AC00C7A1F5 /* GetPrivateBalance.swift in Sources */,
+				996DD2922132CC8000C7A1F5 /* String+Crypto.swift in Sources */,
 				99CFC10D2132B95B00311357 /* AppDelegate.swift in Sources */,
+				99CFC11F2132BABD00311357 /* TableViewController.swift in Sources */,
+				996DD2A52133DD4800C7A1F5 /* GetPrivateOpenOrders.swift in Sources */,
+				996DD29B21331EED00C7A1F5 /* GetPublicTrades.swift in Sources */,
+				996DD29D2133232500C7A1F5 /* GetPublicOHLC.swift in Sources */,
+				996DD2992133096D00C7A1F5 /* GetPublicTicker.swift in Sources */,
+				99CFC1222132C14C00311357 /* CallKrakenAPI.swift in Sources */,
+				996DD2912132CC8000C7A1F5 /* Digest.swift in Sources */,
+				996DD2A72133E0A400C7A1F5 /* SetPrivateAddOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,15 +379,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLV3T92E3L;
 				INFOPLIST_FILE = Kraken_iOS_API/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.josefonseca.Kraken-iOS-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kraken_iOS_API/Crypto/Kraken_iOS_API-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,15 +401,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLV3T92E3L;
 				INFOPLIST_FILE = Kraken_iOS_API/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.josefonseca.Kraken-iOS-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kraken_iOS_API/Crypto/Kraken_iOS_API-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
