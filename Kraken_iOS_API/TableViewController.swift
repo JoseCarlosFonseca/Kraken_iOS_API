@@ -34,8 +34,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var publicTime: UILabel!
     
     @IBAction func getPublicTimeButton(_ sender: UIButton) {
-        guard APIKeyTextField.text != nil && APISecretTextField.text != nil else { return }
-        let url = CallKrakenAPI().url(APIKey: APIKeyTextField.text!, APISecret: APISecretTextField.text!, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Time, webServiceRequest: nil)
+        let url = CallKrakenAPI().url(APIKey: nil, APISecret: nil, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Time, webServiceRequest: nil)
         CallKrakenAPI().callWebService(webServiceUrl: url, webServiceCallbackResultHandler: getPublicTimeResultHandler)
     }
     
@@ -50,8 +49,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var publicTicker: UILabel!
     
     @IBAction func getPublicTickerButton(_ sender: UIButton) {
-        guard APIKeyTextField.text != nil && APISecretTextField.text != nil else { return }
-        let url = CallKrakenAPI().url(APIKey: APIKeyTextField.text!, APISecret: APISecretTextField.text!, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Ticker, webServiceRequest: ["pair": "XXBTZEUR"])
+        let url = CallKrakenAPI().url(APIKey: nil, APISecret: nil, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Ticker, webServiceRequest: ["pair": "XXBTZEUR"])
         CallKrakenAPI().callWebService(webServiceUrl: url, webServiceCallbackResultHandler: getPublicTickerResultHandler)
     }
     
@@ -63,11 +61,11 @@ class TableViewController: UITableViewController {
         }
     }
     
+    
     @IBOutlet weak var publicTrades: UILabel!
     
     @IBAction func getPublicTradesButton(_ sender: UIButton) {
-        guard APIKeyTextField.text != nil && APISecretTextField.text != nil else { return }
-        let url = CallKrakenAPI().url(APIKey: APIKeyTextField.text!, APISecret: APISecretTextField.text!, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Trades, webServiceRequest: ["pair": "XXBTZEUR"])
+        let url = CallKrakenAPI().url(APIKey: nil, APISecret: nil, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .Trades, webServiceRequest: ["pair": "XXBTZEUR"])
         CallKrakenAPI().callWebService(webServiceUrl: url, webServiceCallbackResultHandler: getPublicTradesResultHandler)
     }
     
@@ -79,11 +77,11 @@ class TableViewController: UITableViewController {
         }
     }
 
+    
     @IBOutlet weak var publicOHLC: UILabel!
     
     @IBAction func getPublicOHLCButton(_ sender: UIButton) {
-        guard APIKeyTextField.text != nil && APISecretTextField.text != nil else { return }
-        let url = CallKrakenAPI().url(APIKey: APIKeyTextField.text!, APISecret: APISecretTextField.text!, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .OHLC, webServiceRequest: ["pair": "XXBTZEUR","interval": "60"])
+        let url = CallKrakenAPI().url(APIKey: nil, APISecret: nil, webServiceUrl: KrakenAPIURL.text!, webServiceName: .`public`, webServiceOperation: .OHLC, webServiceRequest: ["pair": "XXBTZEUR","interval": "60"])
         CallKrakenAPI().callWebService(webServiceUrl: url, webServiceCallbackResultHandler: getPublicOHLCResultHandler)
     }
     

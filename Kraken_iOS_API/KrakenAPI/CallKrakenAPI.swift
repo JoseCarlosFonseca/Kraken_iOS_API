@@ -130,47 +130,36 @@ class CallKrakenAPI: NSObject, URLSessionDelegate  {
         print("\(dateString) \(method) error -> \(error)")
     }
     
-    func url(APIKey: String, APISecret: String,webServiceUrl: String, webServiceName: Api, webServiceOperation: Method, webServiceRequest: [String: String]?)-> NSMutableURLRequest {
-        var hash = ""
-        var hashData = Data()
-        var binaryData = Data()
-        var secretDecoded = Data()
-        var sign = Data()
-        var pathSh256 = Data()
-        var apiKey = ""
-        var apiSign = ""
-        var path = ""
-        let serviceName = "/\(webServiceName.rawValue)/"
-        var serviceRequest = ""
-        var postdata = ""
-        
-        let webServicePath = "/0"+serviceName+"\(webServiceOperation)"
-        let url = NSURL(string: "\(webServiceUrl)\(webServicePath)")!
+    func url(APIKey: String?, APISecret: String?, webServiceUrl: String, webServiceName: Api, webServiceOperation: Method, webServiceRequest: [String: String]?)-> NSMutableURLRequest {
+
+        let path = "/0/\(webServiceName.rawValue)/\(webServiceOperation)"
+        let url = NSURL(string: "\(webServiceUrl)\(path)")!
         
         //Create an request object and configurate it
         let request = NSMutableURLRequest(url: url as URL)
         
+        var serviceRequest = ""
         if let webServiceRequests = webServiceRequest {
             for(key,value) in webServiceRequests {
                 serviceRequest += key+"="+value+"&"
             }
         }
         
-        if serviceName == "/private/" {
+        var postdata = ""
+        if webServiceName == .private { //access to the private API
             // generate a 64 bit nonce using a timestamp at microsecond resolution
             // string functions are used to avoid problems on 32 bit systems
             let nonce = Int64(Date().timeIntervalSince1970 * 1000000)
             postdata = "\(serviceRequest)nonce=\(nonce)"
-            path = "/0"+serviceName+"\(webServiceOperation)"
             
-            hash = ("\(nonce)"+postdata).sha256!
+            let hash = ("\(nonce)"+postdata).sha256!
             
-            hashData = hash.data(using: .bytesHexLiteral)!
+            let hashData = hash.data(using: .bytesHexLiteral)!
             
-            binaryData = path.data(using: .utf8, allowLossyConversion: false)!
+            let binaryData = path.data(using: .utf8, allowLossyConversion: false)!
             
             let lenTotal = binaryData.count + hashData.count
-            pathSh256 = Data(capacity: lenTotal)
+            var pathSh256 = Data(capacity: lenTotal)
             for i in 0..<binaryData.count {
                 let j = binaryData.index(binaryData.startIndex, offsetBy: i)
                 let bytes = binaryData[j]
@@ -182,16 +171,16 @@ class CallKrakenAPI: NSObject, URLSessionDelegate  {
                 pathSh256.append(bytes)
             }
             
-            secretDecoded = Data(base64Encoded: APISecret, options: .ignoreUnknownCharacters)!
+            let APISecret = APISecret ?? ""
+            let secretDecoded = Data(base64Encoded: APISecret, options: .ignoreUnknownCharacters)!
+            let sign = HMAC.sign(data: pathSh256, algorithm: .sha512, key: secretDecoded)
+            let apiSign = String(data: (sign.base64EncodedData()),encoding: String.Encoding.utf8)!
             
-            sign = HMAC.sign(data: pathSh256, algorithm: .sha512, key: secretDecoded)
-            
-            apiSign = String(data: (sign.base64EncodedData()),encoding: String.Encoding.utf8)!
-            apiKey = APIKey
+            let apiKey = APIKey ?? ""
             
             request.addValue(apiKey, forHTTPHeaderField: "API-Key")
             request.addValue(apiSign, forHTTPHeaderField: "API-Sign")
-        } else {
+        } else { //access to the public API
             postdata = "\(serviceRequest)"
         }
         
