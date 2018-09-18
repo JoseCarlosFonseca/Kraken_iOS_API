@@ -3,7 +3,7 @@ Kraken Exchange iOS API Client example
 
 The Kraken web site (https://www.kraken.com/help/api#example-api-code) has some API client examples, but unfortunately it lacks one for the iOS platform
 This project fills this gap by providing an easy to use working example
-It was created with Xcode 9.4.1 and uses Swift 4
+It was created with Xcode 10 and uses Swift 4.2
 
 This project implements the access to the following Kraken APIs, both public and private:
 
